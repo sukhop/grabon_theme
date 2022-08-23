@@ -365,7 +365,7 @@ a {
 /* footer styling ends */
 @media (min-width: 320px) and (max-width: 480px) {
     .section {
-        max-width: 16rem;
+        max-width: 18rem;
     }
     .section-y {
         padding: 2rem 0;
