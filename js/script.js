@@ -79,7 +79,6 @@ function notifyToggle() {
 let searchBtn = document.querySelector('.search');
 let searchWrapper = document.querySelector('.search_wrapper');
 let searchClose = document.querySelector('.close_search');
-let searchOverlay = document.querySelector('.search_overlay');
 
 searchBtn.addEventListener('click', ()=> {
     searchToggle();
@@ -87,10 +86,10 @@ searchBtn.addEventListener('click', ()=> {
 searchClose.addEventListener('click', ()=> {
     searchToggle();
 });
-searchOverlay.addEventListener('click', ()=> {
-    searchToggle();
-});
+if(searchWrapper.classList.contains('search_active')) {
+    console.log('true');
+}
 function searchToggle() {
     searchWrapper.classList.toggle('search_active');
-    searchOverlay.classList.toggle('search_active');
+    document.body.classList.toggle('overflow');
 }

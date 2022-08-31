@@ -1,12 +1,15 @@
 /* DM Serif Display */
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap'); */
 
 /* Nunito Sans */
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap'); */
+
+/* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --font-nunito: 'Nunito Sans', sans-serif;
-    --font-dm: 'DM Serif Display', serif;
+    --font-nunito: 'Poppins', sans-serif;
+    --font-dm: 'Poppins', sans-serif;
     --fontawesome: 'Font Awesome 6 Pro';
     --color-green: #60A600;
     --color-gold: #ffd700;
@@ -43,6 +46,9 @@ body {
 /* utilities start */
 .offwhite {
     background-color: var(--color-offwhite);
+}
+.overflow {
+    overflow-y: hidden;
 }
 h1,
 h2,
@@ -318,16 +324,15 @@ input.theme_button {
     font-size: 1.5rem;
     font-weight: 700;
 }
-.shutter_top {
+.collection_card {
     position: relative;
     z-index: 2;
     box-shadow: 0px 20px 30px -15px black;
 }
-.shutter_top p {
+.collection_image p {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 10%;
+    z-index: 2;
     text-align: center;
     width: 100%;
     font-size: 1.3rem;
@@ -337,7 +342,7 @@ input.theme_button {
 .collection_card {
     position: relative;
     overflow: hidden;
-    border-radius: 0 0 10px 10px;
+    border-radius: 20px;
     cursor: pointer;
 }
 .collection_card:hover .collection_image{
@@ -370,6 +375,26 @@ input.theme_button {
 }
 .collect_offer .collect_text a {
     font-size: 12px;
+}
+
+.review_wrapper {
+    padding: 0 5px;
+}
+.review_wrapper .review_name {
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--color-lightgray);
+    background-color: var(--color-darkblue);
+    border-radius: 20px 0;
+}
+.review_wrapper .review_image {
+    overflow: hidden;
+    border-radius: 0 20px;
+}
+.review_wrapper .review_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 /* index styling ends */
 /* footer styling starts */
@@ -497,10 +522,13 @@ input.theme_button {
     font-weight: 700;
     font-family: var(--font-dm);
     font-size: 1.2rem;
-    margin-bottom: 1rem;
+    color: var(--color-green);
+    margin-bottom: 0.5rem;
 }
-.product_review .prod_desc {
-    font-size: 13px;
+.product_review .prod_title {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 20px;
 }
 .product_review .prod_rating {
     position: absolute;
@@ -860,9 +888,6 @@ input.theme_button {
 }
 /* Contact section styling ends */
 @media (min-width: 320px) and (max-width: 480px) {
-    .search_group {
-        max-width: 300px;
-    }
     .section {
         max-width: 90%;
     }
@@ -890,9 +915,6 @@ input.theme_button {
     }
 }
 @media (min-width: 480px) and (max-width: 576px) {
-    .search_group {
-        max-width: 430px;
-    }
     .section {
         max-width: 80%;
     }
@@ -908,9 +930,6 @@ input.theme_button {
     }
 }
 @media (min-width: 576px) and (max-width: 768px) {
-    .search_group {
-        max-width: 500px;
-    }
     .section {
         max-width: 80%;
     }

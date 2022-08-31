@@ -36,11 +36,11 @@
 
     cursor: pointer;
 
-    color: white;
+    color: rgba(17,17,17, 0.4);
     border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(15, 4, 76, 0.2);
     outline: none;
-    background: rgba(255,255,255,0.4);
+    background: rgba(17, 17, 17, 0.1);
     transition: all 0.3s ease;
 }
 .slick-prev:hover,
@@ -48,10 +48,10 @@
 .slick-next:hover,
 .slick-next:focus
 {
-    color: #bda053;
+    color: var(--color-darkblue);
     outline: none;
-    border: 1px solid #bda053;
-    background: rgba(189, 160, 83, 0.3);
+    border: 1px solid rgba(15, 4, 76, 0.2);
+    background: rgba(15, 4, 76, 0.1);
 }
 .slick-prev:hover:before,
 .slick-prev:focus:before,
