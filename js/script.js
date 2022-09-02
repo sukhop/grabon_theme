@@ -93,3 +93,29 @@ function searchToggle() {
     searchWrapper.classList.toggle('search_active');
     document.body.classList.toggle('overflow');
 }
+
+// category accordian
+let titleGroup = document.querySelectorAll('.title_group');
+titleGroup.forEach(element => {
+    element.addEventListener('click', ()=> {
+        element.nextElementSibling.classList.toggle('close');
+        element.classList.toggle('active');
+    });
+});
+
+// rate overlay
+let rateBtn = document.querySelector('.rate');
+let rateWrapper = document.querySelector('.rate_overlay');
+let rateClose = document.querySelector('.rate_close');
+
+rateBtn.addEventListener('click', ()=> {
+    rateToggle();
+});
+
+rateClose.addEventListener('click', ()=> {
+    rateToggle();
+});
+
+function rateToggle() {
+    rateWrapper.classList.toggle('active');
+}

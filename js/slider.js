@@ -45,4 +45,13 @@ $(function () {
     function overlayToggle() {
         $('.detail_overlay').toggleClass('active');
     }
+    $('.offer_details').on('click', () => {
+        offerOverlayToggle();
+    });
+    $('.offer-overlay_close').on('click', () => {
+        offerOverlayToggle();
+    });
+    function offerOverlayToggle() {
+        $('.offer-detail_overlay').toggleClass('active');
+    } 
 });
