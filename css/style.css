@@ -1271,6 +1271,9 @@ input.theme_button {
 .similar_coupons li {
     margin-top: 0.6rem;
 }
+.rate_overlay.active .rate_wrapper {
+    transform: scale(1);
+}
 .rate_overlay {
     visibility: hidden;
     opacity: 0;
@@ -1295,6 +1298,8 @@ input.theme_button {
     text-align: center;
     display: grid;
     place-items: center;
+    transition: all 0.3s ease;
+    transform: scale(0);
 }
 .rate_overlay .rate_wrapper .fa-xmark {
     position: absolute;
@@ -1355,6 +1360,9 @@ input.theme_button {
     .vote_wrapper:nth-child(2) .vote_icon {
         font-size: 1.5rem;
     }
+    .rate_overlay .rate_wrapper {
+        width: 300px;
+    }
 }
 @media (min-width: 480px) and (max-width: 576px) {
     .section {
@@ -1380,6 +1388,9 @@ input.theme_button {
     }
     .vote_wrapper:nth-child(2) .vote_icon {
         font-size: 1.5rem;
+    }
+    .rate_overlay .rate_wrapper {
+        width: 400px;
     }
 }
 @media (min-width: 576px) and (max-width: 768px) {
